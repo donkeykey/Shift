@@ -45,7 +45,7 @@
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
     frame_w = self.view.bounds.size.width;
-    frame_h = self.view.bounds.size.width;
+    frame_h = self.view.bounds.size.height;
     mode = 0;
     [self initUser];
     [self startTimer];
@@ -59,7 +59,7 @@
 
 -(void)initUser{
     own_x = frame_w/2;
-    own_y = 100;
+    own_y = frame_h/2;
     own_y = [self getHeight];
     // 自分自身のオブジェクト
     UIImage *own_img = [UIImage imageNamed:@"pin.png"];
@@ -68,16 +68,16 @@
     own.center = CGPointMake(own_x, own_y);
     [self.view addSubview:own];
     NSArray *groupData = [NSArray arrayWithObjects:
-                          [NSArray arrayWithObjects:@100, @500, @"たっくん", nil],
+                          [NSArray arrayWithObjects:@150, @400, @"たっくん", nil],
                           [NSArray arrayWithObjects:@200, @300, @"かわしー", nil],
-                          [NSArray arrayWithObjects:@300, @400, @"ぴかし", nil], nil];
+                          [NSArray arrayWithObjects:@170, @400, @"ぴかし", nil], nil];
     
     NSArray *allData = [NSArray arrayWithObjects:
-                        [NSArray arrayWithObjects:@100, @500, @"たっくん", nil],
+                        [NSArray arrayWithObjects:@150, @400, @"たっくん", nil],
                         [NSArray arrayWithObjects:@200, @300, @"かわしー", nil],
                         [NSArray arrayWithObjects:@200, @200, @"たろう", nil],
-                        [NSArray arrayWithObjects:@300, @400, @"はなこ", nil],
-                        [NSArray arrayWithObjects:@300, @300, @"ぴかし", nil], nil];
+                        [NSArray arrayWithObjects:@150, @300, @"はなこ", nil],
+                        [NSArray arrayWithObjects:@170, @400, @"ぴかし", nil], nil];
     
     group = [NSMutableArray array];
     for(NSArray* user in groupData) {
