@@ -12,3 +12,6 @@
 @interface MapViewController : UIViewController <GMSMapViewDelegate>
 
 @end
+
+const float MIDLAT = 35.6656277;
+const float MIDLON = 139.730963;
