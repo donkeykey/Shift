@@ -14,6 +14,7 @@
     double longitude;   // 軽度
     int mode; // モード
 }
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @property double latitude;
 @property double longitude;
 @property double mode;

@@ -7,6 +7,7 @@
 //
 
 #import "SolidViewController.h"
+#import "SensorController.h"
 
 @interface SolidViewController (){
     UIImageView *own;
@@ -17,6 +18,8 @@
     int frame_w;
     int frame_h;
     bool isButtonOpen;
+    AFHTTPSessionManager *manager;
+    NSTimer *testTiemr;
 }
 @property (weak, nonatomic) IBOutlet UIButton *mainButton;
 - (IBAction)mainButton:(id)sender;
@@ -26,7 +29,10 @@
 - (IBAction)friendButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *allButton;
 - (IBAction)allButton:(id)sender;
+
+
 @end
+
 
 @implementation SolidViewController
 
@@ -34,9 +40,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"SolidViewController");
+    
     // そのまま画像表示
-//    UIImage *backgroundImage=[UIImage imageNamed:@"midtown.png"];
-//    self.view.backgroundColor=[UIColor colorWithPatternImage:backgroundImage];
+    //    UIImage *backgroundImage=[UIImage imageNamed:@"midtown.png"];
+    //    self.view.backgroundColor=[UIColor colorWithPatternImage:backgroundImage];
     
     //iPhone/iPadの画面サイズに合わせて画像を拡大・縮小する
     UIGraphicsBeginImageContext(self.view.frame.size);
@@ -50,6 +57,34 @@
     [self initUser];
     [self startTimer];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    
+    // Network
+    manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer.timeoutInterval = 10.0;
+    
+    //[self getHeight:20.0 pressure:1019.0];
+    
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    [testTiemr invalidate];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    testTiemr = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                                          target:self
+                                                        selector:@selector(startGetSensorValue:)
+                                                        userInfo:nil
+                                                         repeats:YES];
+    [testTiemr fire];
+}
+
+- (void) startGetSensorValue:(NSTimer*)timer {
+    NSLog(@"temp:%lf", [SensorController sharedManager].temp);
+    NSLog(@"ps:%lf", [SensorController sharedManager].ps);
+    [self getHeight:[SensorController sharedManager].temp pressure:[SensorController sharedManager].ps];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,7 +130,7 @@
         member.center = CGPointMake([[user objectAtIndex:0] floatValue], [[user objectAtIndex:1] floatValue]);
         [all addObject:member];
     }
-
+    
 }
 - (void)startTimer{
     // タイマーを作成してスタート
@@ -169,14 +204,14 @@ int scale = 1.0;
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)mainButton:(id)sender {
     [UIView beginAnimations:nil context:nil];
@@ -205,4 +240,26 @@ int scale = 1.0;
 - (IBAction)allButton:(id)sender {
     [self changeMode:2];
 }
+
+- (void) getHeight:(float)temperature pressure:(float)pressure
+{
+    NSString *URL = [[NSString alloc] initWithFormat:
+                     @"http://pikashi.tokyo/shift/getheight?temperature=%f&pressure=%f",
+                     temperature, pressure];
+    URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [manager GET:URL parameters:nil success:^(NSURLSessionDataTask *task, NSString *response) {
+        NSString *resStr = [response.description componentsSeparatedByString:@"\""][1];
+        float altitude = [resStr floatValue] - 20.0;
+        if (altitude < 0 || altitude > 300) {
+            altitude = 0.0;
+        }
+        //NSLog(@"%lf", [resStr floatValue]);
+        _label.text = [NSString stringWithFormat:@"%lf",altitude];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        NSLog(@"failure: %ld", (long)response.statusCode);
+    }];
+    
+}
+
 @end

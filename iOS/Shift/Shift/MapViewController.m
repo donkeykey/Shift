@@ -13,7 +13,7 @@
 
 @implementation MapViewController {
     GMSMapView *mapView_;
-    GMSMarker *marker[100];
+    GMSMarker *marker[400];
 }
 
 - (void)viewDidLoad {
@@ -30,8 +30,8 @@
 }
 
 - (void) protMakerAtRandom {
-    for (int i = 0; i < 20; i++) {
-        float weight = 600;
+    for (int i = 0; i < 400; i++) {
+        float weight = 100;
         float randLat = arc4random_uniform(1000000)/(weight*1000000.0) - 1/(weight*2);
         float randLon = arc4random_uniform(1000000)/(weight*1000000.0) - 1/(weight*2);
         // Creates a marker in the center of the map.

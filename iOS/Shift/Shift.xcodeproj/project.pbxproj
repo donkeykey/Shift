@@ -33,6 +33,7 @@
 		42B0B2A21AAACFFE002EC067 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B0B2A11AAACFFE002EC067 /* QuartzCore.framework */; };
 		42B0B2A41AAAD007002EC067 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B0B2A31AAAD007002EC067 /* SystemConfiguration.framework */; };
 		42F5A81A1AAB8EBB00F35360 /* Pods.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 42F5A8191AAB8EBB00F35360 /* Pods.xcconfig */; };
+		42F5A81E1AAB96FB00F35360 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F5A81D1AAB96FB00F35360 /* SensorController.m */; };
 		6DB2C709A08B9ED3B9BC579B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF0359063EF3D7CA3DE1E80 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		42B0B2A11AAACFFE002EC067 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		42B0B2A31AAAD007002EC067 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		42F5A8191AAB8EBB00F35360 /* Pods.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		42F5A81C1AAB96FB00F35360 /* SensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorController.h; path = ../../../../../../tempfiles/SensorController.h; sourceTree = "<group>"; };
+		42F5A81D1AAB96FB00F35360 /* SensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorController.m; path = ../../../../../../tempfiles/SensorController.m; sourceTree = "<group>"; };
 		7F598D38C045AD205E930E58 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ADF0359063EF3D7CA3DE1E80 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,6 +156,8 @@
 		42B0B2561AAACAB9002EC067 /* Shift */ = {
 			isa = PBXGroup;
 			children = (
+				42F5A81C1AAB96FB00F35360 /* SensorController.h */,
+				42F5A81D1AAB96FB00F35360 /* SensorController.m */,
 				42B0B25B1AAACAB9002EC067 /* AppDelegate.h */,
 				42B0B25C1AAACAB9002EC067 /* AppDelegate.m */,
 				42B0B25E1AAACAB9002EC067 /* ViewController.h */,
@@ -361,6 +366,7 @@
 				42B0B2601AAACAB9002EC067 /* ViewController.m in Sources */,
 				42B0B2851AAACBCF002EC067 /* FloorViewController.m in Sources */,
 				42B0B2821AAACBC5002EC067 /* SolidViewController.m in Sources */,
+				42F5A81E1AAB96FB00F35360 /* SensorController.m in Sources */,
 				42B0B25D1AAACAB9002EC067 /* AppDelegate.m in Sources */,
 				42B0B25A1AAACAB9002EC067 /* main.m in Sources */,
 				42B0B2881AAACBD8002EC067 /* FloorDetailViewController.m in Sources */,
