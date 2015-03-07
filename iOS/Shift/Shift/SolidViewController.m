@@ -16,8 +16,16 @@
     NSMutableArray *all;
     int frame_w;
     int frame_h;
+    bool isButtonOpen;
 }
-
+@property (weak, nonatomic) IBOutlet UIButton *mainButton;
+- (IBAction)mainButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *myButton;
+- (IBAction)myButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *friendButton;
+- (IBAction)friendButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *allButton;
+- (IBAction)allButton:(id)sender;
 @end
 
 @implementation SolidViewController
@@ -41,6 +49,7 @@
     mode = 0;
     [self initUser];
     [self startTimer];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +59,7 @@
 
 -(void)initUser{
     own_x = frame_w/2;
-    own_y = 0;
+    own_y = 100;
     own_y = [self getHeight];
     // 自分自身のオブジェクト
     UIImage *own_img = [UIImage imageNamed:@"pin.png"];
@@ -111,7 +120,7 @@
 int scale = 1.0;
 - (double)getHeight{
     // 高さを取得して返す
-    return own_y + 100;// 今ここ適当
+    return own_y; // 今ここ適当
 }
 
 - (void)changeMode:(int)i{
@@ -172,4 +181,28 @@ int scale = 1.0;
 }
 */
 
+- (IBAction)mainButton:(id)sender {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:0.2f];
+    [UIView setAnimationRepeatAutoreverses:NO];
+    if (isButtonOpen) {
+        _friendButton.frame = CGRectMake(260, 500, 40, 40);
+        _allButton.frame = CGRectMake(260, 500, 40, 40);
+        _myButton.frame = CGRectMake(260, 500, 40, 40);
+        isButtonOpen = NO;
+    } else {
+        _friendButton.frame = CGRectMake(260, 450, 40, 40);
+        _allButton.frame = CGRectMake(260, 400, 40, 40);
+        _myButton.frame = CGRectMake(260, 350, 40, 40);
+        isButtonOpen = YES;
+    }
+    [UIView commitAnimations];
+}
+- (IBAction)myButton:(id)sender {
+}
+- (IBAction)friendButton:(id)sender {
+}
+- (IBAction)allButton:(id)sender {
+}
 @end
