@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SolidViewController : UIViewController
+@interface SolidViewController : UIViewController {
+    double latitude;    // 緯度
+    double longitude;   // 軽度
+    int mode; // モード
+}
+@property double latitude;
+@property double longitude;
+@property double mode;
 
 @end
