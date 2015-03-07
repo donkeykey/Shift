@@ -14,6 +14,10 @@
 		42B0B2651AAACAB9002EC067 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B0B2641AAACAB9002EC067 /* Images.xcassets */; };
 		42B0B2681AAACAB9002EC067 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B0B2661AAACAB9002EC067 /* LaunchScreen.xib */; };
 		42B0B2741AAACAB9002EC067 /* ShiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B2731AAACAB9002EC067 /* ShiftTests.m */; };
+		42B0B27F1AAACBB9002EC067 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B27E1AAACBB9002EC067 /* MapViewController.m */; };
+		42B0B2821AAACBC5002EC067 /* SolidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B2811AAACBC5002EC067 /* SolidViewController.m */; };
+		42B0B2851AAACBCF002EC067 /* FloorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B2841AAACBCF002EC067 /* FloorViewController.m */; };
+		42B0B2881AAACBD8002EC067 /* FloorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B2871AAACBD8002EC067 /* FloorDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		42B0B26D1AAACAB9002EC067 /* ShiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B0B2721AAACAB9002EC067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42B0B2731AAACAB9002EC067 /* ShiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiftTests.m; sourceTree = "<group>"; };
+		42B0B27D1AAACBB9002EC067 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		42B0B27E1AAACBB9002EC067 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		42B0B2801AAACBC5002EC067 /* SolidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolidViewController.h; sourceTree = "<group>"; };
+		42B0B2811AAACBC5002EC067 /* SolidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolidViewController.m; sourceTree = "<group>"; };
+		42B0B2831AAACBCF002EC067 /* FloorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorViewController.h; sourceTree = "<group>"; };
+		42B0B2841AAACBCF002EC067 /* FloorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorViewController.m; sourceTree = "<group>"; };
+		42B0B2861AAACBD8002EC067 /* FloorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorDetailViewController.h; sourceTree = "<group>"; };
+		42B0B2871AAACBD8002EC067 /* FloorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,14 @@
 				42B0B2641AAACAB9002EC067 /* Images.xcassets */,
 				42B0B2661AAACAB9002EC067 /* LaunchScreen.xib */,
 				42B0B2571AAACAB9002EC067 /* Supporting Files */,
+				42B0B27D1AAACBB9002EC067 /* MapViewController.h */,
+				42B0B27E1AAACBB9002EC067 /* MapViewController.m */,
+				42B0B2801AAACBC5002EC067 /* SolidViewController.h */,
+				42B0B2811AAACBC5002EC067 /* SolidViewController.m */,
+				42B0B2831AAACBCF002EC067 /* FloorViewController.h */,
+				42B0B2841AAACBCF002EC067 /* FloorViewController.m */,
+				42B0B2861AAACBD8002EC067 /* FloorDetailViewController.h */,
+				42B0B2871AAACBD8002EC067 /* FloorDetailViewController.m */,
 			);
 			path = Shift;
 			sourceTree = "<group>";
@@ -220,8 +240,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				42B0B2601AAACAB9002EC067 /* ViewController.m in Sources */,
+				42B0B2851AAACBCF002EC067 /* FloorViewController.m in Sources */,
+				42B0B2821AAACBC5002EC067 /* SolidViewController.m in Sources */,
 				42B0B25D1AAACAB9002EC067 /* AppDelegate.m in Sources */,
 				42B0B25A1AAACAB9002EC067 /* main.m in Sources */,
+				42B0B2881AAACBD8002EC067 /* FloorDetailViewController.m in Sources */,
+				42B0B27F1AAACBB9002EC067 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
