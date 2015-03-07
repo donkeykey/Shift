@@ -12,8 +12,8 @@
     UIImageView *own;
     double own_x;
     double own_y;
-    NSArray *group;
-    NSArray *all;
+    NSMutableArray *group;
+    NSMutableArray *all;
     int frame_w;
     int frame_h;
 }
@@ -38,7 +38,7 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
     frame_w = self.view.bounds.size.width;
     frame_h = self.view.bounds.size.width;
-    mode = 1;
+    mode = 0;
     [self initUser];
     [self startTimer];
 }
@@ -58,39 +58,35 @@
     own.frame = CGRectMake(0, 0, 13, 15);
     own.center = CGPointMake(own_x, own_y);
     [self.view addSubview:own];
+    NSArray *groupData = [NSArray arrayWithObjects:
+                          [NSArray arrayWithObjects:@100, @500, @"たっくん", nil],
+                          [NSArray arrayWithObjects:@200, @300, @"かわしー", nil],
+                          [NSArray arrayWithObjects:@300, @400, @"ぴかし", nil], nil];
     
-    switch (mode) {
-        case 1:
-            // グループ
-            group = [NSArray arrayWithObjects:
-                     [NSArray arrayWithObjects:@100, @500, @"たっくん", nil],
-                     [NSArray arrayWithObjects:@200, @300, @"かわしー", nil],
-                     [NSArray arrayWithObjects:@300, @400, @"ぴかし", nil], nil];
-            break;
-        case 2:
-            // 全ユーザ
-            all = [NSArray arrayWithObjects:
-                   [NSArray arrayWithObjects:@100, @500, @"たっくん", nil],
-                   [NSArray arrayWithObjects:@200, @300, @"かわしー", nil],
-                   [NSArray arrayWithObjects:@200, @200, @"たろう", nil],
-                   [NSArray arrayWithObjects:@300, @400, @"はなこ", nil],
-                   [NSArray arrayWithObjects:@300, @300, @"ぴかし", nil], nil];
-        default:
-            break;
-    }
-    for(NSArray* user in group) {
+    NSArray *allData = [NSArray arrayWithObjects:
+                        [NSArray arrayWithObjects:@100, @500, @"たっくん", nil],
+                        [NSArray arrayWithObjects:@200, @300, @"かわしー", nil],
+                        [NSArray arrayWithObjects:@200, @200, @"たろう", nil],
+                        [NSArray arrayWithObjects:@300, @400, @"はなこ", nil],
+                        [NSArray arrayWithObjects:@300, @300, @"ぴかし", nil], nil];
+    
+    group = [NSMutableArray array];
+    for(NSArray* user in groupData) {
         UIImage *img = [UIImage imageNamed:@"group.png"];
         UIImageView *member = [[UIImageView alloc] initWithImage:img];
         member.frame = CGRectMake(0, 0, 13, 15);
         member.center = CGPointMake([[user objectAtIndex:0] floatValue], [[user objectAtIndex:1] floatValue]);
         [self.view addSubview:member];
+        [group addObject:member];
     }
-    for(NSArray* user in all) {
+    all = [NSMutableArray array];
+    for(NSArray* user in allData) {
         UIImage *img = [UIImage imageNamed:@"other.png"];
         UIImageView *member = [[UIImageView alloc] initWithImage:img];
         member.frame = CGRectMake(0, 0, 13, 15);
         member.center = CGPointMake([[user objectAtIndex:0] floatValue], [[user objectAtIndex:1] floatValue]);
         [self.view addSubview:member];
+        [all addObject:member];
     }
 
 }
@@ -116,6 +112,54 @@ int scale = 1.0;
 - (double)getHeight{
     // 高さを取得して返す
     return own_y + 100;// 今ここ適当
+}
+
+- (void)changeMode:(int)i{
+    
+    switch (i) {
+        case 0:
+            if(mode == 1){
+                for (UIImageView* user in group) {
+                    [user removeFromSuperview];
+                }
+            }else if(mode == 2){
+                for (UIImageView* user in all) {
+                    [user removeFromSuperview];
+                }
+            }
+            break;
+        case 1:
+            if(mode == 0){
+                for (UIImageView* user in group) {
+                    [self.view addSubview:user];
+                }
+            }else if(mode == 2){
+                for (UIImageView* user in all) {
+                    [user removeFromSuperview];
+                }
+                for (UIImageView* user in group) {
+                    [self.view addSubview:user];
+                }
+            }
+            break;
+        case 2:
+            if(mode == 0){
+                for (UIImageView* user in all) {
+                    [self.view addSubview:user];
+                }
+            }else if(mode == 1){
+                for (UIImageView* user in group) {
+                    [user removeFromSuperview];
+                }
+                for (UIImageView* user in all) {
+                    [self.view addSubview:user];
+                }
+            }
+            break;
+        default:
+            break;
+    }
+    mode = i;
 }
 
 /*
