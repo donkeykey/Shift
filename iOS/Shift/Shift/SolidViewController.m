@@ -85,7 +85,6 @@
         UIImageView *member = [[UIImageView alloc] initWithImage:img];
         member.frame = CGRectMake(0, 0, 13, 15);
         member.center = CGPointMake([[user objectAtIndex:0] floatValue], [[user objectAtIndex:1] floatValue]);
-        [self.view addSubview:member];
         [group addObject:member];
     }
     all = [NSMutableArray array];
@@ -94,7 +93,6 @@
         UIImageView *member = [[UIImageView alloc] initWithImage:img];
         member.frame = CGRectMake(0, 0, 13, 15);
         member.center = CGPointMake([[user objectAtIndex:0] floatValue], [[user objectAtIndex:1] floatValue]);
-        [self.view addSubview:member];
         [all addObject:member];
     }
 
@@ -124,7 +122,6 @@ int scale = 1.0;
 }
 
 - (void)changeMode:(int)i{
-    
     switch (i) {
         case 0:
             if(mode == 1){
@@ -200,9 +197,12 @@ int scale = 1.0;
     [UIView commitAnimations];
 }
 - (IBAction)myButton:(id)sender {
+    [self changeMode:0];
 }
 - (IBAction)friendButton:(id)sender {
+    [self changeMode:1];
 }
 - (IBAction)allButton:(id)sender {
+    [self changeMode:2];
 }
 @end
