@@ -9,7 +9,17 @@
 #import "SolidViewController.h"
 
 @interface SolidViewController ()
-
+{
+    bool isButtonOpen;
+}
+@property (weak, nonatomic) IBOutlet UIButton *mainButton;
+- (IBAction)mainButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *myButton;
+- (IBAction)myButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *friendButton;
+- (IBAction)friendButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *allButton;
+- (IBAction)allButton:(id)sender;
 @end
 
 @implementation SolidViewController
@@ -36,4 +46,28 @@
 }
 */
 
+- (IBAction)mainButton:(id)sender {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:0.2f];
+    [UIView setAnimationRepeatAutoreverses:NO];
+    if (isButtonOpen) {
+        _friendButton.frame = CGRectMake(260, 500, 40, 40);
+        _allButton.frame = CGRectMake(260, 500, 40, 40);
+        _myButton.frame = CGRectMake(260, 500, 40, 40);
+        isButtonOpen = NO;
+    } else {
+        _friendButton.frame = CGRectMake(260, 450, 40, 40);
+        _allButton.frame = CGRectMake(260, 400, 40, 40);
+        _myButton.frame = CGRectMake(260, 350, 40, 40);
+        isButtonOpen = YES;
+    }
+    [UIView commitAnimations];
+}
+- (IBAction)myButton:(id)sender {
+}
+- (IBAction)friendButton:(id)sender {
+}
+- (IBAction)allButton:(id)sender {
+}
 @end
