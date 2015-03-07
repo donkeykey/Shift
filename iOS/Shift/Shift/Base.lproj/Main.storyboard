@@ -55,7 +55,7 @@
         <!--Solid View Controller-->
         <scene sceneID="vbf-es-jy6">
             <objects>
-                <viewController id="quz-mx-u5c" customClass="SolidViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="solid_view" useStoryboardIdentifierAsRestorationIdentifier="YES" id="quz-mx-u5c" customClass="SolidViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BgS-uh-8T2"/>
                         <viewControllerLayoutGuide type="bottom" id="XjU-KR-0Tu"/>
@@ -130,23 +130,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RF5-iP-irw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1900.5" y="793.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="eaa-eR-Upg">
-            <objects>
-                <viewController id="yTn-sz-HDQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tj0-Jq-w78"/>
-                        <viewControllerLayoutGuide type="bottom" id="pSf-1t-Hy4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bqx-I4-N0C">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cva-mE-tbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>
