@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4206A6F719BDE99A004399DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206A6F619BDE99A004399DE /* Foundation.framework */; };
+		4206A6F919BDE99A004399DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206A6F819BDE99A004399DE /* CoreGraphics.framework */; };
+		4206A6FB19BDE99A004399DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206A6FA19BDE99A004399DE /* UIKit.framework */; };
+		4206A70119BDE99A004399DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4206A6FF19BDE99A004399DE /* InfoPlist.strings */; };
+		4206A70319BDE99A004399DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206A70219BDE99A004399DE /* main.m */; };
+		4206A70719BDE99A004399DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206A70619BDE99A004399DE /* AppDelegate.m */; };
+		4206A70A19BDE99A004399DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4206A70819BDE99A004399DE /* Main.storyboard */; };
+		4206A70D19BDE99A004399DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206A70C19BDE99A004399DE /* ViewController.m */; };
+		4206A70F19BDE99A004399DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4206A70E19BDE99A004399DE /* Images.xcassets */; };
+		4206A71619BDE99A004399DE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206A71519BDE99A004399DE /* XCTest.framework */; };
+		4206A71719BDE99A004399DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206A6F619BDE99A004399DE /* Foundation.framework */; };
+		4206A71819BDE99A004399DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206A6FA19BDE99A004399DE /* UIKit.framework */; };
+		4206A72019BDE99A004399DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4206A71E19BDE99A004399DE /* InfoPlist.strings */; };
+		4206A72219BDE99A004399DE /* BLESerialSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4206A72119BDE99A004399DE /* BLESerialSampleTests.m */; };
+		42B0B2411AAAC4CB002EC067 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B2401AAAC4CB002EC067 /* MapViewController.m */; };
+		42B0B2441AAAC4D7002EC067 /* SolidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B2431AAAC4D7002EC067 /* SolidViewController.m */; };
+		42B0B2471AAAC4E7002EC067 /* FloorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B2461AAAC4E7002EC067 /* FloorViewController.m */; };
+		42B0B24A1AAAC4F1002EC067 /* FloorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0B2491AAAC4F1002EC067 /* FloorDetailViewController.m */; };
+		42F5F55F19BE08360008BE06 /* BLESerialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F5F55B19BE08360008BE06 /* BLESerialManager.m */; };
+		42F5F56019BE08360008BE06 /* BLEBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F5F55E19BE08360008BE06 /* BLEBaseClass.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4206A71919BDE99A004399DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4206A6EB19BDE99A004399DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4206A6F219BDE99A004399DE;
+			remoteInfo = BLESerialSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4206A6F319BDE99A004399DE /* AtmosSensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtmosSensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4206A6F619BDE99A004399DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4206A6F819BDE99A004399DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4206A6FA19BDE99A004399DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4206A6FE19BDE99A004399DE /* AtmosSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AtmosSensor-Info.plist"; sourceTree = "<group>"; };
+		4206A70019BDE99A004399DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4206A70219BDE99A004399DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4206A70419BDE99A004399DE /* AtmosSensor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AtmosSensor-Prefix.pch"; sourceTree = "<group>"; };
+		4206A70519BDE99A004399DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4206A70619BDE99A004399DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4206A70919BDE99A004399DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4206A70B19BDE99A004399DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4206A70C19BDE99A004399DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4206A70E19BDE99A004399DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4206A71419BDE99A004399DE /* AtmosSensorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtmosSensorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4206A71519BDE99A004399DE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4206A71D19BDE99A004399DE /* AtmosSensorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AtmosSensorTests-Info.plist"; sourceTree = "<group>"; };
+		4206A71F19BDE99A004399DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4206A72119BDE99A004399DE /* BLESerialSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLESerialSampleTests.m; sourceTree = "<group>"; };
+		42B0B23F1AAAC4CB002EC067 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		42B0B2401AAAC4CB002EC067 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		42B0B2421AAAC4D7002EC067 /* SolidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SolidViewController.h; sourceTree = "<group>"; };
+		42B0B2431AAAC4D7002EC067 /* SolidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SolidViewController.m; sourceTree = "<group>"; };
+		42B0B2451AAAC4E7002EC067 /* FloorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorViewController.h; sourceTree = "<group>"; };
+		42B0B2461AAAC4E7002EC067 /* FloorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorViewController.m; sourceTree = "<group>"; };
+		42B0B2481AAAC4F1002EC067 /* FloorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorDetailViewController.h; sourceTree = "<group>"; };
+		42B0B2491AAAC4F1002EC067 /* FloorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorDetailViewController.m; sourceTree = "<group>"; };
+		42F5F55B19BE08360008BE06 /* BLESerialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLESerialManager.m; path = BLESerialSample/BLESerialManager.m; sourceTree = "<group>"; };
+		42F5F55C19BE08360008BE06 /* BLESerialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLESerialManager.h; path = BLESerialSample/BLESerialManager.h; sourceTree = "<group>"; };
+		42F5F55D19BE08360008BE06 /* BLEBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEBaseClass.h; path = BLESerialSample/BLEBaseClass.h; sourceTree = "<group>"; };
+		42F5F55E19BE08360008BE06 /* BLEBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLEBaseClass.m; path = BLESerialSample/BLEBaseClass.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4206A6F019BDE99A004399DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4206A6F919BDE99A004399DE /* CoreGraphics.framework in Frameworks */,
+				4206A6FB19BDE99A004399DE /* UIKit.framework in Frameworks */,
+				4206A6F719BDE99A004399DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4206A71119BDE99A004399DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4206A71619BDE99A004399DE /* XCTest.framework in Frameworks */,
+				4206A71819BDE99A004399DE /* UIKit.framework in Frameworks */,
+				4206A71719BDE99A004399DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4206A6EA19BDE99A004399DE = {
+			isa = PBXGroup;
+			children = (
+				42F5F56119BE09260008BE06 /* BLELibraly */,
+				4206A6FC19BDE99A004399DE /* AtmosSensor */,
+				4206A71B19BDE99A004399DE /* AtmosSensor */,
+				4206A6F519BDE99A004399DE /* Frameworks */,
+				4206A6F419BDE99A004399DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4206A6F419BDE99A004399DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4206A6F319BDE99A004399DE /* AtmosSensor.app */,
+				4206A71419BDE99A004399DE /* AtmosSensorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4206A6F519BDE99A004399DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4206A6F619BDE99A004399DE /* Foundation.framework */,
+				4206A6F819BDE99A004399DE /* CoreGraphics.framework */,
+				4206A6FA19BDE99A004399DE /* UIKit.framework */,
+				4206A71519BDE99A004399DE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4206A6FC19BDE99A004399DE /* AtmosSensor */ = {
+			isa = PBXGroup;
+			children = (
+				4206A70519BDE99A004399DE /* AppDelegate.h */,
+				4206A70619BDE99A004399DE /* AppDelegate.m */,
+				4206A70819BDE99A004399DE /* Main.storyboard */,
+				4206A70B19BDE99A004399DE /* ViewController.h */,
+				4206A70C19BDE99A004399DE /* ViewController.m */,
+				4206A70E19BDE99A004399DE /* Images.xcassets */,
+				4206A6FD19BDE99A004399DE /* Supporting Files */,
+				42B0B23F1AAAC4CB002EC067 /* MapViewController.h */,
+				42B0B2401AAAC4CB002EC067 /* MapViewController.m */,
+				42B0B2421AAAC4D7002EC067 /* SolidViewController.h */,
+				42B0B2431AAAC4D7002EC067 /* SolidViewController.m */,
+				42B0B2451AAAC4E7002EC067 /* FloorViewController.h */,
+				42B0B2461AAAC4E7002EC067 /* FloorViewController.m */,
+				42B0B2481AAAC4F1002EC067 /* FloorDetailViewController.h */,
+				42B0B2491AAAC4F1002EC067 /* FloorDetailViewController.m */,
+			);
+			name = AtmosSensor;
+			path = BLESerialSample;
+			sourceTree = "<group>";
+		};
+		4206A6FD19BDE99A004399DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4206A6FE19BDE99A004399DE /* AtmosSensor-Info.plist */,
+				4206A6FF19BDE99A004399DE /* InfoPlist.strings */,
+				4206A70219BDE99A004399DE /* main.m */,
+				4206A70419BDE99A004399DE /* AtmosSensor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4206A71B19BDE99A004399DE /* AtmosSensor */ = {
+			isa = PBXGroup;
+			children = (
+				4206A72119BDE99A004399DE /* BLESerialSampleTests.m */,
+				4206A71C19BDE99A004399DE /* Supporting Files */,
+			);
+			name = AtmosSensor;
+			path = BLESerialSampleTests;
+			sourceTree = "<group>";
+		};
+		4206A71C19BDE99A004399DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4206A71D19BDE99A004399DE /* AtmosSensorTests-Info.plist */,
+				4206A71E19BDE99A004399DE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42F5F56119BE09260008BE06 /* BLELibraly */ = {
+			isa = PBXGroup;
+			children = (
+				42F5F55C19BE08360008BE06 /* BLESerialManager.h */,
+				42F5F55B19BE08360008BE06 /* BLESerialManager.m */,
+				42F5F55D19BE08360008BE06 /* BLEBaseClass.h */,
+				42F5F55E19BE08360008BE06 /* BLEBaseClass.m */,
+			);
+			name = BLELibraly;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4206A6F219BDE99A004399DE /* AtmosSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4206A72519BDE99A004399DE /* Build configuration list for PBXNativeTarget "AtmosSensor" */;
+			buildPhases = (
+				4206A6EF19BDE99A004399DE /* Sources */,
+				4206A6F019BDE99A004399DE /* Frameworks */,
+				4206A6F119BDE99A004399DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AtmosSensor;
+			productName = BLESerialSample;
+			productReference = 4206A6F319BDE99A004399DE /* AtmosSensor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4206A71319BDE99A004399DE /* AtmosSensorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4206A72819BDE99A004399DE /* Build configuration list for PBXNativeTarget "AtmosSensorTests" */;
+			buildPhases = (
+				4206A71019BDE99A004399DE /* Sources */,
+				4206A71119BDE99A004399DE /* Frameworks */,
+				4206A71219BDE99A004399DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4206A71A19BDE99A004399DE /* PBXTargetDependency */,
+			);
+			name = AtmosSensorTests;
+			productName = BLESerialSampleTests;
+			productReference = 4206A71419BDE99A004399DE /* AtmosSensorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4206A6EB19BDE99A004399DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "川島 大地";
+				TargetAttributes = {
+					4206A71319BDE99A004399DE = {
+						TestTargetID = 4206A6F219BDE99A004399DE;
+					};
+				};
+			};
+			buildConfigurationList = 4206A6EE19BDE99A004399DE /* Build configuration list for PBXProject "AtmosSensor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4206A6EA19BDE99A004399DE;
+			productRefGroup = 4206A6F419BDE99A004399DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4206A6F219BDE99A004399DE /* AtmosSensor */,
+				4206A71319BDE99A004399DE /* AtmosSensorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4206A6F119BDE99A004399DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4206A70F19BDE99A004399DE /* Images.xcassets in Resources */,
+				4206A70119BDE99A004399DE /* InfoPlist.strings in Resources */,
+				4206A70A19BDE99A004399DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4206A71219BDE99A004399DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4206A72019BDE99A004399DE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4206A6EF19BDE99A004399DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B0B2441AAAC4D7002EC067 /* SolidViewController.m in Sources */,
+				42B0B24A1AAAC4F1002EC067 /* FloorDetailViewController.m in Sources */,
+				42B0B2471AAAC4E7002EC067 /* FloorViewController.m in Sources */,
+				4206A70D19BDE99A004399DE /* ViewController.m in Sources */,
+				4206A70719BDE99A004399DE /* AppDelegate.m in Sources */,
+				42F5F56019BE08360008BE06 /* BLEBaseClass.m in Sources */,
+				42B0B2411AAAC4CB002EC067 /* MapViewController.m in Sources */,
+				4206A70319BDE99A004399DE /* main.m in Sources */,
+				42F5F55F19BE08360008BE06 /* BLESerialManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4206A71019BDE99A004399DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4206A72219BDE99A004399DE /* BLESerialSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4206A71A19BDE99A004399DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4206A6F219BDE99A004399DE /* AtmosSensor */;
+			targetProxy = 4206A71919BDE99A004399DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4206A6FF19BDE99A004399DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4206A70019BDE99A004399DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4206A70819BDE99A004399DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4206A70919BDE99A004399DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4206A71E19BDE99A004399DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4206A71F19BDE99A004399DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4206A72319BDE99A004399DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4206A72419BDE99A004399DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4206A72619BDE99A004399DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESerialSample/AtmosSensor-Prefix.pch";
+				INFOPLIST_FILE = "BLESerialSample/AtmosSensor-Info.plist";
+				PRODUCT_NAME = AtmosSensor;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4206A72719BDE99A004399DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESerialSample/AtmosSensor-Prefix.pch";
+				INFOPLIST_FILE = "BLESerialSample/AtmosSensor-Info.plist";
+				PRODUCT_NAME = AtmosSensor;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4206A72919BDE99A004399DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BLESerialSample.app/BLESerialSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESerialSample/BLESerialSample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BLESerialSampleTests/AtmosSensorTests-Info.plist";
+				PRODUCT_NAME = AtmosSensorTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4206A72A19BDE99A004399DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BLESerialSample.app/BLESerialSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLESerialSample/BLESerialSample-Prefix.pch";
+				INFOPLIST_FILE = "BLESerialSampleTests/AtmosSensorTests-Info.plist";
+				PRODUCT_NAME = AtmosSensorTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4206A6EE19BDE99A004399DE /* Build configuration list for PBXProject "AtmosSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4206A72319BDE99A004399DE /* Debug */,
+				4206A72419BDE99A004399DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4206A72519BDE99A004399DE /* Build configuration list for PBXNativeTarget "AtmosSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4206A72619BDE99A004399DE /* Debug */,
+				4206A72719BDE99A004399DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4206A72819BDE99A004399DE /* Build configuration list for PBXNativeTarget "AtmosSensorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4206A72919BDE99A004399DE /* Debug */,
+				4206A72A19BDE99A004399DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4206A6EB19BDE99A004399DE /* Project object */;
+}
