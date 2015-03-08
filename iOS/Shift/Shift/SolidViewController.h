@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AFNetworking.h"
 
-@interface SolidViewController : UIViewController {
+@interface SolidViewController : UIViewController<UINavigationControllerDelegate> {
     double latitude;    // 緯度
     double longitude;   // 軽度
     int mode; // モード

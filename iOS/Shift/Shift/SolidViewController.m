@@ -20,6 +20,7 @@
     bool isButtonOpen;
     AFHTTPSessionManager *manager;
     NSTimer *testTiemr;
+    UIImageView *backImage;
 }
 @property (weak, nonatomic) IBOutlet UIButton *mainButton;
 - (IBAction)mainButton:(id)sender;
@@ -56,6 +57,7 @@
     mode = 0;
     [self initUser];
     [self startTimer];
+    self.navigationController.delegate = self;
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     
     // Network
@@ -65,6 +67,20 @@
     manager.requestSerializer.timeoutInterval = 10.0;
     
     //[self getHeight:20.0 pressure:1019.0];
+    
+    //UIView *v = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    //
+    //UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"other.png"]];
+    //imgView.backgroundColor = [UIColor redColor];
+    //[self.view addSubview:imgView];
+    
+    backImage = [[UIImageView alloc] init];
+    backImage.frame = CGRectMake(0, 0, 22, 22);
+    backImage.image = [UIImage imageNamed:@"me"];
+    [self.view addSubview:backImage];
+    
+    //imgView.frame = CGRectMake(30, 100, 30, 30);
+    //[self.view addSubview:imgView];
     
 }
 
@@ -80,6 +96,7 @@
                                                          repeats:YES];
     [testTiemr fire];
 }
+
 
 - (void) startGetSensorValue:(NSTimer*)timer {
     NSLog(@"temp:%lf", [SensorController sharedManager].temp);
@@ -99,7 +116,7 @@
     // 自分自身のオブジェクト
     UIImage *own_img = [UIImage imageNamed:@"pin.png"];
     own = [[UIImageView alloc] initWithImage:own_img];
-    own.frame = CGRectMake(0, 0, 13, 15);
+    own.frame = CGRectMake(0, 0, 13, 13);
     own.center = CGPointMake(own_x, own_y);
     [self.view addSubview:own];
     NSArray *groupData = [NSArray arrayWithObjects:
@@ -116,17 +133,17 @@
     
     group = [NSMutableArray array];
     for(NSArray* user in groupData) {
-        UIImage *img = [UIImage imageNamed:@"group.png"];
+        UIImage *img = [UIImage imageNamed:@"oth"];
         UIImageView *member = [[UIImageView alloc] initWithImage:img];
-        member.frame = CGRectMake(0, 0, 13, 15);
+        member.frame = CGRectMake(0, 0, 13, 13);
         member.center = CGPointMake([[user objectAtIndex:0] floatValue], [[user objectAtIndex:1] floatValue]);
         [group addObject:member];
     }
     all = [NSMutableArray array];
     for(NSArray* user in allData) {
-        UIImage *img = [UIImage imageNamed:@"other.png"];
+        UIImage *img = [UIImage imageNamed:@"oth"];
         UIImageView *member = [[UIImageView alloc] initWithImage:img];
-        member.frame = CGRectMake(0, 0, 13, 15);
+        member.frame = CGRectMake(0, 0, 13, 13);
         member.center = CGPointMake([[user objectAtIndex:0] floatValue], [[user objectAtIndex:1] floatValue]);
         [all addObject:member];
     }
@@ -243,6 +260,7 @@ int scale = 1.0;
 
 - (void) getHeight:(float)temperature pressure:(float)pressure
 {
+    float weight = 5;
     NSString *URL = [[NSString alloc] initWithFormat:
                      @"http://pikashi.tokyo/shift/getheight?temperature=%f&pressure=%f",
                      temperature, pressure];
@@ -250,11 +268,8 @@ int scale = 1.0;
     [manager GET:URL parameters:nil success:^(NSURLSessionDataTask *task, NSString *response) {
         NSString *resStr = [response.description componentsSeparatedByString:@"\""][1];
         float altitude = [resStr floatValue] - 20.0;
-        if (altitude < 0 || altitude > 300) {
-            altitude = 0.0;
-        }
-        //NSLog(@"%lf", [resStr floatValue]);
         _label.text = [NSString stringWithFormat:@"%lf",altitude];
+        backImage.frame = CGRectMake(149, (480 - altitude*weight), 22, 22);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
         NSLog(@"failure: %ld", (long)response.statusCode);
