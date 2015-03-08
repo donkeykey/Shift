@@ -18,5 +18,6 @@
 @property double latitude;
 @property double longitude;
 @property double mode;
+@property float altitude;
 
 @end
